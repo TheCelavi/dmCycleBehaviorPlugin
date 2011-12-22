@@ -1,0 +1,6 @@
+dmBehaviors:
+  dmCycleBehavior:
+    section: Media Gallery
+    name: Cycle
+    form: dmCycleBehaviorForm
+    view: dmCycleBehaviorView
