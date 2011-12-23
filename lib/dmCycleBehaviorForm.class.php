@@ -82,12 +82,12 @@ class dmCycleBehaviorForm extends dmBehaviorBaseForm {
             'timeout' => 'Time between transitions in ms'
         )); 
         
-        if (!$this->getWidgetSchema()->getDefault('pause')) $this->getWidgetSchema()->setDefault ('pause', true);
-        if (!$this->getWidgetSchema()->getDefault('random')) $this->getWidgetSchema()->setDefault ('random', false);
-        if (!$this->getWidgetSchema()->getDefault('fx')) $this->getWidgetSchema()->setDefault ('fx', 'fade');
-        if (!$this->getWidgetSchema()->getDefault('easing')) $this->getWidgetSchema()->setDefault ('easing', 'jswing');
-        if (!$this->getWidgetSchema()->getDefault('speed')) $this->getWidgetSchema()->setDefault ('speed', 300);
-        if (!$this->getWidgetSchema()->getDefault('timeout')) $this->getWidgetSchema()->setDefault ('timeout', 5000);
+        if (!$this->getDefault('pause')) $this->setDefault ('pause', true);
+        if (!$this->getDefault('random')) $this->setDefault ('random', false);
+        if (!$this->getDefault('fx')) $this->setDefault ('fx', 'fade');
+        if (!$this->getDefault('easing')) $this->setDefault ('easing', 'jswing');
+        if (!$this->getDefault('speed')) $this->setDefault ('speed', 300);
+        if (!$this->getDefault('timeout')) $this->setDefault ('timeout', 5000);
         
         parent::configure();
     }
