@@ -13,15 +13,17 @@
             var $this = $(this);
             // Cycle does not have a good destroy method :(            
             // This is memory mess, so it would be convinient to have view behavior and admin behavior
-            var $copy = $this.clone(true, true);
-            var $parent = $this.parent();
-            $copy.data('dmCycleBehaviorPreviousDOM', $this.detach());            
-            $parent.append($copy);
-            $copy.cycle(behavior);
+            var $copy = $this.children().clone(true, true);
+            $this.data('dmCycleBehaviorPreviousDOM', $this.children().detach());            
+            $this.children().remove();
+            $this.append($copy);
+            $this.cycle(behavior);
         },
         stop: function(behavior) {
             var $this = $(this);
-            $this.replaceWith($this.data('dmCycleBehaviorPreviousDOM'));            
+            $this.children().remove();
+            $this.append($this.data('dmCycleBehaviorPreviousDOM'));
+            $this.removeAttr('style');           
         },
         destroy: function(behavior) {            
             var $this = $(this);
