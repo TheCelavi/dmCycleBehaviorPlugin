@@ -1,4 +1,4 @@
 js:
   dmCycleBehaviorPlugin:
-    cycle:  jquery.cycle
-    launch: dmCycleBehavior
+    cycle:  jquery.cycle.min
+    launch: dmCycleBehavior.min

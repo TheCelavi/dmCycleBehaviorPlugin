@@ -30,7 +30,7 @@
             $this.data('dmCycleBehavior', null);
             $this.data('dmCycleBehaviorPreviousDOM', null)
         }
-    }
+    };
     
     $.fn.dmCycleBehavior = function(method, behavior){
         
